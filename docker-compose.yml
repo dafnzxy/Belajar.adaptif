@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file: backend/.env
+    volumes:
+      - ./backend/belajar.db:/app/backend/belajar.db
+      - ./backend/uploads:/app/backend/uploads
+    restart: unless-stopped

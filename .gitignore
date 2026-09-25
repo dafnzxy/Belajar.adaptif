@@ -1,0 +1,31 @@
+# Environment & secrets — JANGAN commit
+.env
+backend/.env
+frontend/.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.db
+*.db-wal
+*.db-shm
+vault_index.json
+
+# Uploads (PII)
+uploads/
+backend/uploads/
+
+# Logs
+*.log
+uvicorn_*.log
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Editor
+.DS_Store
+.vscode/settings.json
