@@ -8,3 +8,9 @@ services:
       - ./backend/belajar.db:/app/backend/belajar.db
       - ./backend/uploads:/app/backend/uploads
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s

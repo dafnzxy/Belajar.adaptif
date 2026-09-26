@@ -28,7 +28,8 @@ Jalankan:
 """
 
 from dotenv import load_dotenv
-load_dotenv()  # baca file .env sebelum modul lain (llm_provider, dll) baca os.environ
+from pathlib import Path as _DotenvPath
+load_dotenv(_DotenvPath(__file__).resolve().parent / ".env")
 
 import json
 import os
